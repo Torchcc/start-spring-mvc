@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 public class HelloController  {
     @RequestMapping("/hello")
     public String sayHello() {
-        System.out.println("hello mvc");
+        System.out.println("hhhhhello mvc");
         return "success";
     }
 
