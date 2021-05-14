@@ -1,0 +1,44 @@
+1.删除索引
+DELETE /ems
+
+2.创建索引并指定类型
+PUT /ems
+{
+  "mappings":{
+    "emp":{
+      "properties":{
+        "name":{
+          "type":"text"
+        },
+        "age":{
+          "type":"integer"
+        },
+        "bir":{
+          "type":"date"
+        },
+        "content":{
+          "type":"text"
+        },
+        "address":{
+          "type":"keyword"
+        }
+      }
+    }
+  }
+}
+
+3.插入测试数据
+
+PUT /ems/emp/_bulk
+  {"index":{}}
+  {"name":"lisa wang","age":23,"bir":"2012-12-12","content":"Copies of this document may be made for your own use and for distribution to others, provided that you do not charge any fee for such copies and further provided that each copy contains this Copyright Notice, whether distributed in print or electronically","address":"HongKong"}
+  {"index":{}}
+  {"name":"gabi chen","age":24,"bir":"2012-12-12","content":"Learn the Spring basics. Spring Boot builds on many other Spring projects. Check the spring.io web-site for a wealth of reference documentation.","address":"London"}
+  {"index":{}}
+  {"name":"tati liu","age":8,"bir":"2012-12-12","content":"Instructions for how to upgrade from earlier versions of Spring Boot are provided on the project wiki. Follow the links in the release notes section to find the version that you want to upgrade to.","address":"Guangzhou"}
+  {"index":{}}
+  {"name":"win7","age":9,"bir":"2012-12-12","content":"Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.","address":"India"}
+  {"index":{}}
+  {"name":"jessy zhang","age":43,"bir":"2012-12-12","content":"Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions, and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster","address":"Singapore"}
+  {"index":{}}
+  {"name":"min zhao","age":59,"bir":"2012-12-12","content":"Java Is the Language of Possibilities. Java is powering the innovation behind our digital world. Harness this potential with Java resources for student coders","address":"Beijing"}
